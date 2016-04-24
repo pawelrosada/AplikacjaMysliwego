@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button dbButton = (Button) findViewById(R.id.dbButton);
         Button gpsButton = (Button) findViewById(R.id.gpsButton);
+        Button mapButton = (Button) findViewById(R.id.mapButton);
+
 
         if (dbButton != null){
             dbButton.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     //GPS example activity start
                     Intent intent = new Intent(MainActivity.this, GpsUseExampleActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+        if (mapButton != null){
+            mapButton .setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    //GPS example activity start
+                    Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                     startActivity(intent);
                 }
             });

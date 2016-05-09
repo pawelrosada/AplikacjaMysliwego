@@ -23,9 +23,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        if (mMap != null) {
-            mMap.setMyLocationEnabled(true);
-            mMap.setMyLocationEnabled(true);
+        try
+        {
+            if (mMap != null) {
+                mMap.setMyLocationEnabled(true);
+                mMap.setMyLocationEnabled(true);
+            }
+        }
+        catch (SecurityException exception)
+        {
+            //do something on exception
         }
 
     }

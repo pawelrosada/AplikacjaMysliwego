@@ -24,14 +24,13 @@ public class GpsUseExampleActivity extends AppCompatActivity {
                     Gps tmp = new Gps(activityObj);
 
                     tmp.getLongitude();
-                    TextView latitude = (TextView)findViewById(R.id.latitude);
-                    TextView longitude = (TextView)findViewById(R.id.longitude);
+                    TextView latitude = (TextView)findViewById(R.id.latitudeText);
+                    TextView longitude = (TextView)findViewById(R.id.longitudeText);
 
                     latitude.setText((String.format("%.6f", tmp.getLatitude())));
                     longitude.setText((String.format("%.6f", tmp.getLongitude())));
                 }
             });
         }
-
     }
 }

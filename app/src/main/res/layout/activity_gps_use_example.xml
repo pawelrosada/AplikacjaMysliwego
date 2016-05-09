@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/latitude"
+        android:id="@+id/latitudeText"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="72dp" />
@@ -41,8 +41,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/longitude"
-        android:layout_alignTop="@+id/latitude"
+        android:id="@+id/longitudeText"
+        android:layout_alignTop="@+id/latitudeText"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Szerokość"
         android:id="@+id/textView4"
-        android:layout_above="@+id/longitude"
+        android:layout_above="@+id/longitudeText"
         android:layout_alignParentStart="true" />
 
     <TextView

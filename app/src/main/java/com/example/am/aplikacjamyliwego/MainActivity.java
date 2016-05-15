@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     //GPS example activity start
                     Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                    startActivity(intent);
                 }
             });
         }

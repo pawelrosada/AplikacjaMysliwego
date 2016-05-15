@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="253dp"
         android:id="@+id/imageView"
-        android:src="@drawable/mapTop"
+        android:src="@drawable/maptop"
         android:layout_weight="1"/>
 
     <TextView
@@ -25,7 +25,7 @@
         android:textColor="#fff"
         android:layout_gravity="center|bottom"
         android:paddingBottom="12.5dp"
-        android:background="@drawable/bottomWhite"/>
+        android:background="@drawable/bottom_white"/>
 
         <ImageView
             android:layout_marginTop="20dp"
@@ -49,13 +49,13 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/roundborder"
-            android:layout_gravity="center_vertical||center_horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
             />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center_vertical||center_horizontal"
-            android:background="@drawable/pinWhite"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/pinwhite"
             />
 
     </FrameLayout>
@@ -118,7 +118,7 @@
         <RadioButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/pinWhite"
+            android:background="@drawable/pinwhite"
             android:id="@+id/radioButton"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="15dp"
@@ -127,28 +127,28 @@
         <RadioButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/pinRed"
+            android:background="@drawable/pinred"
             android:id="@+id/radioButton1"
             android:layout_marginRight="15dp"
             android:button="@null"/>
         <RadioButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/pinYellow"
+            android:background="@drawable/pinyellow"
             android:id="@+id/radioButton2"
             android:layout_marginRight="15dp"
             android:button="@null"/>
         <RadioButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/pinBlue"
+            android:background="@drawable/pinblue"
             android:id="@+id/radioButton3"
             android:layout_marginRight="15dp"
             android:button="@null"/>
         <RadioButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/pinBlack"
+            android:background="@drawable/pinblack"
             android:id="@+id/radioButton4"
             android:button="@null"
             />

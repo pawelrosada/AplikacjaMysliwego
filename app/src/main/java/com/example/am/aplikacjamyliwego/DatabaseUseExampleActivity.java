@@ -72,6 +72,61 @@ public class DatabaseUseExampleActivity extends AppCompatActivity {
                                 infoText.setText("Delete fail");
                         }
                     }
+
+                    TextView infoTextHunting = (TextView) findViewById(R.id.informationHunting);
+
+                    HuntingArea newHuntingArea = new HuntingArea();
+                    newHuntingArea.setName("nowy teren");
+                    newHuntingArea.setDescription("opis terenu");
+                    newHuntingArea.setTopLeftCorner(10.0);
+                    newHuntingArea.setTopRightCorner(14.0);
+                    newHuntingArea.setBottomLeftCorner(-2.0);
+                    newHuntingArea.setBottomRightCorner(2.0);
+
+                    if(db.addHuntingArea(newHuntingArea)) {
+                        //adding success
+                        if(infoText != null)
+                            infoTextHunting.setText("Adding success");
+                    }else{
+                        //adding fail - drawing pin with this name already exist
+                        if(infoText != null)
+                            infoTextHunting.setText("Adding fail - hunting area with this name already exist");
+                    }
+
+                    List<HuntingArea> huntingAreas = db.getAllHuntingAreas();
+
+                    if (huntingAreas.size() > 0) {
+                        HuntingArea tmpHuntingArea = huntingAreas.get(0);
+                        TextView name = (TextView) findViewById(R.id.nameHunting);
+                        TextView description = (TextView) findViewById(R.id.descriptionHunting);
+                        TextView topLeft = (TextView) findViewById(R.id.topLeft);
+                        TextView topRight = (TextView) findViewById(R.id.topRight);
+                        TextView bottomLeft = (TextView) findViewById(R.id.bottomLeft);
+                        TextView bottomRight = (TextView) findViewById(R.id.bottomRight);
+
+                        if (name != null)
+                            name.setText(tmpHuntingArea.getName());
+                        if (description != null)
+                            description.setText(tmpHuntingArea.getDescription());
+                        if (topLeft != null)
+                            topLeft.setText(String.format("%.6f", tmpHuntingArea.getTopLeftCorner()));
+                        if (topRight != null)
+                            topRight.setText(String.format("%.6f", tmpHuntingArea.getTopRightCorner()));
+                        if (bottomLeft != null)
+                            bottomLeft.setText(String.format("%.6f", tmpHuntingArea.getBottomLeftCorner()));
+                        if (bottomRight != null)
+                            bottomRight.setText(String.format("%.6f", tmpHuntingArea.getBottomRightCorner()));
+
+                        if(db.deleteHuntingArea(tmpHuntingArea.getId())){//delete drawing pin example
+                            //deleted
+                            if(infoText != null)
+                                infoTextHunting.setText("Deleted");
+                        }else{
+                            //delete fail
+                            if(infoText != null)
+                                infoTextHunting.setText("Delete fail");
+                        }
+                    }
                 }
             });
         }

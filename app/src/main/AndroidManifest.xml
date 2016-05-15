@@ -3,10 +3,8 @@
     package="com.example.am.aplikacjamyliwego">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".UserLogin"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,8 +19,6 @@
         </activity>
         <activity android:name=".GpsUseExampleActivity" />
         <activity android:name=".DatabaseUseExampleActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -109,6 +109,7 @@ public class DatabaseUseExampleActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+
                     if(db.addHuntingArea(newHuntingArea)) {
                         //adding success
                         if(infoText != null)

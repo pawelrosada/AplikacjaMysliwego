@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="253dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/mapTop"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="52.48467, 79.29192"
+        android:id="@+id/textView16"
+        android:layout_marginBottom="8dp"
+        android:textSize="19sp"
+        android:textColor="#fff"
+        android:layout_gravity="center|bottom"
+        android:paddingBottom="12.5dp"
+        android:background="@drawable/bottomWhite"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/more"
+
+            />
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="15dp"
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:background="@drawable/menu"
+            />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/roundborder"
+            android:layout_gravity="center_vertical||center_horizontal"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical||center_horizontal"
+            android:background="@drawable/pinWhite"
+            />
+
+    </FrameLayout>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:id="@+id/editText_pinName"
+        android:layout_gravity="center_horizontal"
+        android:hint="Pinezka"
+        android:textColor="#444444"
+        android:textColorHint="#444444"
+        android:textSize="21sp"
+        android:backgroundTint="#109d57"
+        />
+
+    <TextView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nazwa"
+        android:id="@+id/textView_hintPin"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#a8a8a8"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:id="@+id/editText_animal"
+        android:hint="Zwierzę"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#444444"
+        android:textColorHint="#444444"
+        android:textSize="21sp"
+        android:backgroundTint="#109d57"
+
+        />
+
+    <TextView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Wybierz rodzaj zwierza"
+        android:id="@+id/textView_hintAnimal"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#a8a8a8"
+        android:layout_marginBottom="5dp" />
+
+
+
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="7.5dp"
+       >
+        <RadioButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pinWhite"
+            android:id="@+id/radioButton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:button="@null"
+            />
+        <RadioButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pinRed"
+            android:id="@+id/radioButton1"
+            android:layout_marginRight="15dp"
+            android:button="@null"/>
+        <RadioButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pinYellow"
+            android:id="@+id/radioButton2"
+            android:layout_marginRight="15dp"
+            android:button="@null"/>
+        <RadioButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pinBlue"
+            android:id="@+id/radioButton3"
+            android:layout_marginRight="15dp"
+            android:button="@null"/>
+        <RadioButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pinBlack"
+            android:id="@+id/radioButton4"
+            android:button="@null"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:background="@drawable/back"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Wybierz kolor znacznika"
+        android:id="@+id/textView3"
+        android:textColor="#a8a8a8"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="7.5dp"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:enabled="true"
+        android:textColor="#444444"
+        style="?android:attr/borderlessButtonStyle"
+        />
+</LinearLayout>

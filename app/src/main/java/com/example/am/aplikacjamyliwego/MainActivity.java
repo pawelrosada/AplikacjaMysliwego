@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,25 @@ public class MainActivity extends AppCompatActivity {
 
         Button dbButton = (Button) findViewById(R.id.dbButton);
         Button gpsButton = (Button) findViewById(R.id.gpsButton);
+        final Button loginButton = (Button) findViewById(R.id.loginButton);
+        final Button logoutButton = (Button) findViewById(R.id.logoutButton);
+        final Button registerButton = (Button) findViewById(R.id.registerButton);
+
+        Boolean isLogged = ((UserLogin) this.getApplication()).IsLogged;
+        if(isLogged)
+        {
+            loginButton.setVisibility(View.GONE);
+            registerButton.setVisibility(View.GONE);
+            logoutButton.setVisibility(View.VISIBLE);
+        }else{
+            loginButton.setVisibility(View.VISIBLE);
+            registerButton.setVisibility(View.VISIBLE);
+            logoutButton.setVisibility(View.GONE);
+        }
+
+
+
+
 
         if (dbButton != null){
             dbButton.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +56,43 @@ public class MainActivity extends AppCompatActivity {
                     //GPS example activity start
                     Intent intent = new Intent(MainActivity.this, GpsUseExampleActivity.class);
                     startActivity(intent);
+                }
+            });
+        }
+
+        if (loginButton != null){
+            loginButton .setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        if (registerButton != null){
+            registerButton .setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        if (logoutButton != null){
+            logoutButton .setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    ((UserLogin) getApplication()).UserId = "0";
+                    ((UserLogin) getApplication()).IsLogged =  false;
+
+                    loginButton.setVisibility(View.VISIBLE);
+                    registerButton.setVisibility(View.VISIBLE);
+                    logoutButton.setVisibility(View.GONE);
                 }
             });
         }

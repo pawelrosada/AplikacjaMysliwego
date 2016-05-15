@@ -88,7 +88,6 @@ public class DatabaseUseExampleActivity extends AppCompatActivity {
                     newHuntingArea.setTopRightCorner(14.0);
                     newHuntingArea.setBottomLeftCorner(-2.0);
                     newHuntingArea.setBottomRightCorner(2.0);
-<<<<<<< HEAD
                     /***********************************************************
                      JSON test
                      ***********************************************************/
@@ -109,8 +108,6 @@ public class DatabaseUseExampleActivity extends AppCompatActivity {
                     }catch (JSONException e) {
                         e.printStackTrace();
                     }
-=======
->>>>>>> refs/remotes/amocarski/dev
 
                     if(db.addHuntingArea(newHuntingArea)) {
                         //adding success

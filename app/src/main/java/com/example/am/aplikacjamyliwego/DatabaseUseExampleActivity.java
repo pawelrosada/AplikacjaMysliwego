@@ -7,7 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DatabaseUseExampleActivity extends AppCompatActivity {
 
@@ -82,6 +88,29 @@ public class DatabaseUseExampleActivity extends AppCompatActivity {
                     newHuntingArea.setTopRightCorner(14.0);
                     newHuntingArea.setBottomLeftCorner(-2.0);
                     newHuntingArea.setBottomRightCorner(2.0);
+<<<<<<< HEAD
+                    /***********************************************************
+                     JSON test
+                     ***********************************************************/
+                    JSONObject returnFromJson = null;
+
+                    try{
+                        String[] get = {"http://www.huntapp.pe.hu/api.php", "GET"};
+                        String jsonResponce = (new JSONHandling(activityObj).execute(get)).get();
+                        if (jsonResponce != null) {
+                            returnFromJson = new JSONObject(jsonResponce);
+                            JSONHandling.parseJson(returnFromJson, activityObj);
+                        }
+
+                    }catch (ExecutionException ex) {
+                        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+                    }catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+=======
+>>>>>>> refs/remotes/amocarski/dev
 
                     if(db.addHuntingArea(newHuntingArea)) {
                         //adding success

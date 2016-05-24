@@ -1,61 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.am.aplikacjamyliwego.MainActivity">
+    android:weightSum="1"
+    android:background="#149d58">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/bottom_white">
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:id="@+id/imageView_logo"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"
+        />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"/>
+    </FrameLayout>
+    <Button
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Test Czujnika GPS"
+        android:id="@+id/gpsButton"
+        android:layout_alignTop="@+id/loginButton"
+        android:layout_alignParentStart="true"
+        android:textColor="#149d58"
+        />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#149d58"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:text="GPS test"
-        android:id="@+id/gpsButton"
-        android:layout_alignParentBottom="true"
+        android:text="Baza danych"
+        android:id="@+id/dbButton"
+        android:layout_alignTop="@+id/registerButton"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#149d58"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:text="Database test"
-        android:id="@+id/dbButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Map"
+        android:text="Google Maps"
         android:id="@+id/mapButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
-
+        android:layout_below="@+id/gpsButton"
+        android:layout_alignParentStart="true" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp">
+        <Button
+            android:background="#ffffff"
+            android:textColor="#149d58"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Logowanie"
+            android:id="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            />
+        <Button
+            android:background="#ffffff"
+            android:textColor="#149d58"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Wyloguj"
+            android:id="@+id/logoutButton"
+            android:layout_centerHorizontal="true"
+            />
+    </FrameLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:background="#ffffff"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/loginButton"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Rejestracja"
         android:id="@+id/registerButton"
-        android:layout_below="@+id/logoutButton"
-        android:layout_alignStart="@+id/logoutButton" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#149d58"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/logoutButton"
-        android:layout_below="@+id/loginButton"
-        android:layout_centerHorizontal="true" />
-
-</RelativeLayout>
+</LinearLayout>

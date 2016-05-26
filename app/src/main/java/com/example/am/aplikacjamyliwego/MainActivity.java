@@ -7,6 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -104,6 +111,25 @@ public class MainActivity extends AppCompatActivity {
                     logoutButton.setVisibility(View.GONE);
                 }
             });
+        }
+
+        JSONObject returnFromJson = null;
+        final MainActivity activityObj = this;
+
+        try{
+            String[] get = {"http://www.huntapp.pe.hu/api.php", "GET"};
+            String jsonResponce = (new JSONHandling(activityObj).execute(get)).get();
+            if (jsonResponce != null) {
+                    returnFromJson = new JSONObject(jsonResponce);
+                    JSONHandling.parseJson(returnFromJson, activityObj);
+                }
+
+                }catch (ExecutionException ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

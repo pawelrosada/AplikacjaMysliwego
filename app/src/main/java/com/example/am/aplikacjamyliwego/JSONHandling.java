@@ -27,9 +27,9 @@ import java.util.logging.Logger;
  */
 public class JSONHandling extends AsyncTask<String, String, String> {
     public StringBuilder sb;
-    private final DatabaseUseExampleActivity activityObj;
+    private final MainActivity activityObj;
 
-    public JSONHandling(final DatabaseUseExampleActivity activityObj){
+    public JSONHandling(final MainActivity activityObj){
         this.activityObj = activityObj;
     }
     protected String doInBackground(String... url) {
@@ -92,7 +92,7 @@ public class JSONHandling extends AsyncTask<String, String, String> {
         return null;
     }
 
-    public static void parseJson(JSONObject jsonResponse, final DatabaseUseExampleActivity activityObj){
+    public static void parseJson(JSONObject jsonResponse, final MainActivity activityObj){
         Database db = new Database(activityObj);
         try {
 
